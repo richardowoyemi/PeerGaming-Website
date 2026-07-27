@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#16273F">
+<link rel="canonical" href="https://peergaming.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://peergaming.com/">
+<meta property="og:title" content="PeerGaming — Cross-operator liquidity in competitive wagering">
+<meta property="og:description" content="What happens when operators compete for customers but cooperate on liquidity?">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PeerGaming — Cross-operator liquidity in competitive wagering">
+<meta name="twitter:description" content="What happens when operators compete for customers but cooperate on liquidity?">
 <title>PeerGaming — Cross-operator liquidity in competitive wagering</title>
 <meta name="description" content="PeerGaming is a market-structure practice focused on one question: what happens when operators compete for customers but cooperate on liquidity.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,15 +20,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
+    color-scheme:light dark;
     --navy:#16273F; --navy-deep:#101C2E; --gold:#C2A14D;
     --paper:#FBFAF8; --ink:#1E2733; --gray:#5C6776; --mute:#8C99AB; --hair:#E4E7EC;
+    --headline:#16273F; --panel:#FFFFFF;
     --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
     --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    --wrap:1080px; --measure:640px;
+    --wrap:820px; --measure:700px;
     --logo:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABICAMAAABvLTMyAAAAP1BMVEUAAAEaITz+shj+tQn//AD+rhcMGD0cI0ADBVcaIDv/rxf/fwD/AAD/xRtVVVWqVQAAAAAAAAAAAAAAAAAAAAADOeQ2AAAAEHRSTlMA/PgPCZ5W/gigXwIB/wMDNZJVIAAAA0JJREFUeNrVmNmapCAMhSMJSEHVzPu/7ZCAiKyl3TeTr7ttt99zlCUBYBqewh8Ep5QLGwDy8IPw8vMGFeLcfx4okkArpQUk+4+1BZP4DgYxbIPxN7Lph/qIKaxKMAGLoD/MpUe4cH/AOY/JLJEPapn71KyYiypFlXsuDsASRAyLUi5igf48Yln+kFGWkjj20rm7LDBWZCFGXNw6a+AWMbFe22a1qNIRp+UfbbftFYnfsiyztv0l9ztSKVDEwmvfmGiXGk9dHLsRUPwQ4lPckomnD40j4sHa+enhd7eM01mcUp7Vkt3lNF8XiSMes44n81MRuY9ijuOItdnBkHhcwRF6WAgcBJ8DOK++ELPHgkZaLUKTPa/fz29taxbT1EfpaYQLCMp7IpFhV5a0j49bNSj30bHFlESWuFUh7QOGLy69PuAWs9f3moYmOE2LURfD2+3gtgEOVjj4L3Gv38S9+l/2KQ5+HVc1xh/gQgdo5XVxRN+og29x35mVU3XXa3H4dq460sGJV1vL6+GAp8WlujTYrXBFfjfFpVnj6rbBeYrzdZkqdnDxuzZuGxzGibY5VqvLM+8UJ1ZlXrwcbHF5hry4rXAImOfZ8miNS14bt1dcQeN0B8fqiixjiLvQCl4HV2QDpdsSV9FOXoPLXmu3Bc7XNMm4++pMkVHZLg5b2qGvxV26dOE243yPlvTVuMJr5fbAkcd+PoGhsmrUmWv22OJy863DyckKVw1gp9uEk9pkIA+owl28sltTq0OY4LBWZ+pMucW5Ec61uCajzW4f4IJXO3KbcH5m1lfqTFsVtF92kIJqaBpKJ3s/3OZ2R6N2RxWu8Vq6zb0i3JT08VYnuO70CtOrgJo+y7c55/Co7eJOLOIvuG6lktyWI0qcbHIBeh4rcR2vhdvL8OmlLkkFKO/4zvDZ9XqMUvennkFJFt0Ocboo2wtc1+vp9nbKMyzzRjiiWIb1ccMCVNzeVDfwmt3eNWvGVfwT3Lg8Frf3cEOvUtbeVzcr3+E+brYYwG5vVYxTr/JtozpaLcYldWZ+nbyNuPg3CRn5ZUFlvi4jpTxX5iuzXN9Lub5YOgqPNMSriPP4aBZnlmtQ8vevW+EcQm9Z6x9vCyO/zOQV4QAAAABJRU5ErkJggg==");
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%; background:var(--paper); color-scheme:light dark}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:var(--sans); font-size:18px; line-height:1.62;
@@ -35,16 +47,16 @@
 
   /* ---------- header ---------- */
   header{border-bottom:1px solid var(--hair); background:var(--paper)}
-  .bar{display:flex; align-items:center; gap:12px; padding:20px 0}
-  .mark{font-weight:600; letter-spacing:.13em; font-size:14px; color:var(--navy)}
+  .bar{display:flex; align-items:center; gap:12px; padding-top:22px; padding-bottom:22px}
+  .mark{font-weight:600; letter-spacing:.13em; font-size:14px; color:var(--headline)}
   .mark span{color:var(--gray); font-weight:400}
 
   /* ---------- hero ---------- */
-  .hero{background:var(--navy); color:#fff; padding:96px 0 88px; position:relative; overflow:hidden}
+  .hero{background:var(--navy); color:#fff; padding:104px 0 96px; position:relative; overflow:hidden}
   .hero:after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--gold)}
   .hero h1{
     font-family:var(--serif); font-weight:700; margin:0;
-    font-size:clamp(30px,5.2vw,54px); line-height:1.1; letter-spacing:-.015em;
+    font-size:clamp(30px,4.8vw,44px); line-height:1.12; letter-spacing:-.015em;
   }
   .hero h1 em{display:block; font-style:normal; color:var(--gold)}
   .hero p{
@@ -54,34 +66,54 @@
   .rule{width:56px; height:3px; background:var(--gold); margin:34px 0 0}
 
   /* ---------- sections ---------- */
-  section{padding:76px 0; border-bottom:1px solid var(--hair)}
+  section{padding:84px 0; border-bottom:1px solid var(--hair)}
   .eyebrow{
     font-size:12px; letter-spacing:.18em; text-transform:uppercase;
     color:var(--gold); font-weight:600; margin:0 0 18px;
   }
   h2{
-    font-family:var(--serif); font-weight:600; color:var(--navy);
+    font-family:var(--serif); font-weight:600; color:var(--headline);
     font-size:clamp(24px,3.4vw,33px); line-height:1.22; margin:0 0 20px; letter-spacing:-.01em;
   }
   p{margin:0 0 18px}
   p:last-child{margin-bottom:0}
   .lead{font-size:20px; line-height:1.58}
-  strong{font-weight:600; color:var(--navy)}
+  strong{font-weight:600; color:var(--headline)}
   .pull{
     font-family:var(--serif); font-size:clamp(21px,2.9vw,27px); line-height:1.34;
-    color:var(--navy); border-left:3px solid var(--gold);
+    color:var(--headline); border-left:3px solid var(--gold);
     padding:4px 0 4px 22px; margin:30px 0 0; max-width:600px;
   }
 
   /* ---------- signature diagram ---------- */
   .figure{margin:44px 0 0}
   .figure svg{width:100%; height:auto}
-  .figure svg.fig-wide{display:block; max-width:860px}
+  .figure svg.fig-wide{display:block; max-width:100%}
   .figure svg.fig-tall{display:none; max-width:400px; margin:0 auto}
   @media (max-width:720px){
     .figure svg.fig-wide{display:none}
     .figure svg.fig-tall{display:block}
   }
+  /* diagram reveal: the pools merge once, when scrolled to */
+  .figure .pool-bar{transform-box:fill-box; transform-origin:center}
+  .figure.anim-ready .pool-bar{transform:scaleX(.07); opacity:.3}
+  .figure.anim-ready .link{opacity:0}
+  .figure.anim-ready .pool-label{opacity:0}
+  .figure.anim-ready.is-live .link{opacity:.75; transition:opacity .45s ease .1s}
+  .figure.anim-ready.is-live .pool-bar{
+    transform:scaleX(1); opacity:1;
+    transition:transform 1.05s cubic-bezier(.22,.75,.28,1) .35s, opacity .8s ease .35s;
+  }
+  .figure.anim-ready.is-live .pool-label{opacity:1; transition:opacity .5s ease 1.05s}
+
+  /* hero motif, echoes the LinkedIn banner */
+  .hero-nodes{
+    position:absolute; right:5%; top:50%; transform:translateY(-50%);
+    width:250px; height:auto; opacity:.85; pointer-events:none;
+  }
+  @media (max-width:1400px){ .hero-nodes{width:170px; right:3%; opacity:.62} }
+  @media (max-width:1200px){ .hero-nodes{display:none} }
+
   figcaption{
     font-size:14px; color:var(--gray); margin-top:16px; max-width:560px; font-style:italic;
   }
@@ -94,7 +126,7 @@
   /* ---------- precedent list ---------- */
   dl{margin:28px 0 0; max-width:700px}
   dt{
-    font-family:var(--serif); font-weight:600; color:var(--navy);
+    font-family:var(--serif); font-weight:600; color:var(--headline);
     font-size:20px; margin:0; padding-top:18px; border-top:1px solid var(--hair);
   }
   dl > div:first-child dt{border-top:0; padding-top:0}
@@ -102,12 +134,12 @@
   dl > div:last-child dd{margin-bottom:0}
 
   /* ---------- origin ---------- */
-  .origin{background:#fff}
+  .origin{background:var(--panel)}
   .sig{
     margin-top:26px; padding-top:18px; border-top:1px solid var(--hair);
     font-size:15px; color:var(--gray); max-width:600px;
   }
-  .sig b{display:block; color:var(--navy); font-weight:600; font-size:16px}
+  .sig b{display:block; color:var(--headline); font-weight:600; font-size:16px}
 
   /* ---------- contact ---------- */
   .contact{background:var(--navy-deep); color:#fff; border-bottom:0}
@@ -129,6 +161,34 @@
   footer .fm{font-weight:600; letter-spacing:.13em; font-size:12px; color:var(--gray)}
   footer p{max-width:720px; margin:0}
 
+
+  /* ---------- dark mode: a designed theme, so browsers do not invent one ---------- */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#0A1320;
+      --panel:#101C2C;
+      --navy:#16273F;
+      --navy-deep:#101C2E;
+      --ink:#CBD6E3;
+      --gray:#95A6BC;
+      --mute:#74869E;
+      --hair:#22314799;
+      --headline:#EEF2F8;
+    }
+    .hero p{color:#B6C3D4}
+    .contact p{color:#AEBCCE}
+    footer{color:#7E90A8}
+    .links a{color:#EEF2F8; border-bottom-color:rgba(255,255,255,.3)}
+    /* diagram: recolour strokes and labels for the dark field */
+    .figure svg text{fill:#9DAEC4}
+    .figure svg text.accent{fill:#C2A14D}
+    .figure svg .pool-label{fill:#16273F}
+    .figure svg rect[stroke]{stroke:#2B3B52}
+    .figure svg line{stroke:#2B3B52}
+    .hero-nodes g[stroke]{stroke:#3A4D69}
+    .hero-nodes g[fill]{fill:#3A4D69}
+  }
+
   a:focus-visible,.mail:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
   @media (max-width:640px){
     body{font-size:17px}
@@ -147,6 +207,19 @@
 </header>
 
 <div class="hero">
+  <svg class="hero-nodes" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <g stroke="#31435C" stroke-width="1.3" fill="none">
+      <path d="M34 34 L120 110"/><path d="M206 34 L120 110"/>
+      <path d="M20 122 L120 110"/><path d="M220 122 L120 110"/>
+      <path d="M60 196 L120 110"/><path d="M180 196 L120 110"/>
+    </g>
+    <g fill="#31435C">
+      <circle cx="34" cy="34" r="5.5"/><circle cx="206" cy="34" r="5.5"/>
+      <circle cx="20" cy="122" r="5.5"/><circle cx="220" cy="122" r="5.5"/>
+      <circle cx="60" cy="196" r="5.5"/><circle cx="180" cy="196" r="5.5"/>
+    </g>
+    <circle cx="120" cy="110" r="13" fill="#C2A14D"/>
+  </svg>
   <div class="wrap">
     <h1 class="rise d1">The next winner won&rsquo;t own the players.<em>It will connect them.</em></h1>
     <p class="rise d2">PeerGaming explores one question: what happens when operators compete for customers but cooperate on liquidity?</p>
@@ -197,7 +270,7 @@
           <text x="167" y="262" fill="#8C99AB">Three pools. Each capped by its own player base.</text>
         </g>
         <line x1="404" y1="30" x2="404" y2="250" stroke="#E4E7EC"/>
-        <text x="478" y="14" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" letter-spacing="1.6" fill="#C2A14D">CONNECTED</text>
+        <text x="478" y="14" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" letter-spacing="1.6" fill="#C2A14D" class="accent">CONNECTED</text>
         <g font-family="Source Sans 3, sans-serif" font-size="12" fill="#5C6776" text-anchor="middle">
           <rect x="482" y="40" width="98" height="60" rx="4" fill="none" stroke="#E4E7EC"/>
           <rect x="596" y="40" width="98" height="60" rx="4" fill="none" stroke="#E4E7EC"/>
@@ -205,13 +278,13 @@
           <text x="531" y="76">Operator A</text>
           <text x="645" y="76">Operator B</text>
           <text x="759" y="76">Operator C</text>
-          <g stroke="#C2A14D" stroke-width="1.2" opacity=".75">
+          <g class="link" stroke="#C2A14D" stroke-width="1.2" opacity=".75">
             <path d="M531 104 L645 128" fill="none"/>
             <path d="M645 104 L645 128" fill="none"/>
             <path d="M759 104 L645 128" fill="none"/>
           </g>
-          <rect x="482" y="132" width="326" height="70" rx="3" fill="url(#pool)"/>
-          <text x="645" y="174" font-size="13" font-weight="600" fill="#16273F">ONE SHARED POOL</text>
+          <rect class="pool-bar" x="482" y="132" width="326" height="70" rx="3" fill="url(#pool)"/>
+          <text class="pool-label" x="645" y="174" font-size="13" font-weight="600" fill="#16273F">ONE SHARED POOL</text>
           <text x="645" y="232" fill="#16273F">Same brands. Same wallets. Same customers.</text>
           <text x="645" y="262" fill="#8C99AB">One pool no single operator could fund.</text>
         </g>
@@ -238,7 +311,7 @@
           <text x="190" y="192" fill="#8C99AB">Each pool capped by its own player base.</text>
         </g>
         <line x1="40" y1="220" x2="340" y2="220" stroke="#E4E7EC"/>
-        <text x="10" y="256" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#C2A14D">CONNECTED</text>
+        <text x="10" y="256" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#C2A14D" class="accent">CONNECTED</text>
         <g font-family="Source Sans 3, sans-serif" font-size="11" fill="#5C6776" text-anchor="middle">
           <rect x="10"  y="272" width="112" height="46" rx="4" fill="none" stroke="#E4E7EC"/>
           <rect x="134" y="272" width="112" height="46" rx="4" fill="none" stroke="#E4E7EC"/>
@@ -246,13 +319,13 @@
           <text x="66"  y="300">Operator A</text>
           <text x="190" y="300">Operator B</text>
           <text x="314" y="300">Operator C</text>
-          <g stroke="#C2A14D" stroke-width="1.2" opacity=".75">
+          <g class="link" stroke="#C2A14D" stroke-width="1.2" opacity=".75">
             <path d="M66 322 L190 350" fill="none"/>
             <path d="M190 322 L190 350" fill="none"/>
             <path d="M314 322 L190 350" fill="none"/>
           </g>
-          <rect x="10" y="354" width="360" height="62" rx="3" fill="url(#pool2)"/>
-          <text x="190" y="392" font-size="12" font-weight="600" fill="#16273F">ONE SHARED POOL</text>
+          <rect class="pool-bar" x="10" y="354" width="360" height="62" rx="3" fill="url(#pool2)"/>
+          <text class="pool-label" x="190" y="392" font-size="12" font-weight="600" fill="#16273F">ONE SHARED POOL</text>
           <text x="190" y="446" fill="#16273F">Same brands. Same wallets. Same customers.</text>
           <text x="190" y="470" fill="#8C99AB">One pool no single operator could fund.</text>
         </g>
@@ -379,5 +452,19 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var f=document.querySelector('.figure');
+  if(!f) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  f.classList.add('anim-ready');
+  var go=function(){f.classList.add('is-live');};
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries,obs){
+      entries.forEach(function(e){ if(e.isIntersecting){ go(); obs.unobserve(e.target); } });
+    },{threshold:.3}).observe(f);
+  } else { go(); }
+})();
+</script>
 </body>
 </html>
