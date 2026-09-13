@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peergaming.com/sitemap.xml
